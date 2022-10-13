@@ -21,13 +21,12 @@ function Edit(){
         axios.put(`http://localhost:8070/todo/edit/${todo._id}` , st).then((res) =>{
             setStatus(status);
             setTimeout(() => {
-
-                    navigate('/home');
-              }, 5000);
+                navigate('/home');
+              }, 2500);
 
               toast.success('Todo Edited!', {
                 position: "bottom-right",
-                autoClose: 5000,
+                autoClose: 2500,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
