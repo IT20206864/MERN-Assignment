@@ -1,0 +1,20 @@
+a ) SELECT *
+	FROM tasks
+	ORDER BY dateUpdated DESC LIMIT 5
+
+b) SELECT *
+   FROM tasks
+   WHERE title LIKE '%manager%'	
+
+c) UPDATE tasks 
+SET status = "Completed"
+WHERE status = "Pending" OR status = "To Do";
+
+d) SELECT u.name , COUNT(u.id)
+   FROM users u
+   INNER JOIN users ON countries.code=users.country_code;
+   GROUP By u.id
+   HAVING COUNT(id) > 100
+
+
+	
