@@ -21,18 +21,19 @@ function Edit(){
         axios.put(`http://localhost:8070/todo/edit/${todo._id}` , st).then((res) =>{
             setStatus(status);
             setTimeout(() => {
-                toast.success('Todo Edited!', {
-                    position: "bottom-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    });
+
+                    navigate('/home');
               }, 5000);
 
-              navigate('/home');
+              toast.success('Todo Edited!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
 
         }).catch((err) =>{
             console.log(err);
